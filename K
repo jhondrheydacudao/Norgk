@@ -16,7 +16,7 @@ jobs:
 
       - name: Start Ngrok Tunnel
         run: |
-          ngrok config add-authtoken ${{ secrets.NGROK_AUTH_TOKEN }}
+          ngrok config add-authtoken ${{2u29rWgBpT7sac9qZIwqbS1A0mP_7wScvgrQin9NDRJixzdVP}}
           ngrok http 3001 > /dev/null &
           sleep 5
           curl -s http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url'
